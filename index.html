@@ -18,7 +18,13 @@
     />
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
   <!--<link rel="stylesheet" href="style.css">-->
-
+  <style>
+    /* Set the size of the div element that contains the map */
+   #map {
+     height: 400px;  /* The height is 400 pixels */
+     width: 100%;  /* The width is the width of the web page */
+    }
+ </style>
 </head>
 <body>
 
@@ -101,20 +107,7 @@ Add Stroke
 
 <div id="start"></div>
 
-
-
-
-
-    
-
-
-
-  
-
-
-
-
-
+<div id="map"></div>
 
 
 
@@ -127,7 +120,9 @@ Add Stroke
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="script1.js"></script>
-
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBN-8zSdr3WI2rZ9CaoUa1kM8djr8M2Y8U&callback=initMap">
+    </script>
 
     
 
