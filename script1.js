@@ -66,8 +66,6 @@ r = 0
         nexthole(0);
     })
     $('body').on('click','.nxtbtn',function(){
-        var s = usersc[usersc.length-1].hlnum;
-        console.log(s, typeof s)
         
         var q = $(this).siblings('.holen').text();
         console.log(q);
@@ -76,6 +74,7 @@ r = 0
         console.log(t)
         nexthole(parseInt(q));
         endhole(q,t);
+        $(this).prop('disabled', true)
     
     })
     $('body').on('click','.plsbtn',function(){
