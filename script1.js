@@ -118,7 +118,7 @@ function nexthole(i){
     var score = $('<div class="container w-1/6 text-center bg-grey-500 score" data='+(i)+'>').text(0);
     var plusbtn = $('<button class="bg-green-500 plsbtn '+btnclass+'">+</button>');
     //var total = $('<div class="container w-1/6 text-center bg-grey-500">').text('total');
-    var nxtbtn = $('<button class="bg-blue-500 mx-2 nxtbtn '+btnclass+'">Next</button>');
+    var nxtbtn = $('<button class="bg-blue-500 mx-auto lg:mx-2 nxtbtn '+btnclass+'">Next</button>');
 
 
     $('#start').append(entryrow);
@@ -154,7 +154,7 @@ function localscore(){
         var score = $('<div class="container w-1/6 text-center bg-grey-500 score" data='+(l)+'>').text(usersc[l].hlscore);
         var plusbtn = $('<button class="bg-green-200 plsbtn '+btnclass+'" disabled>+</button>');
         //var total = $('<div class="container w-1/6 text-center bg-grey-500">').text('total');
-        var nxtbtn = $('<button class="bg-blue-200 mx-2 nxtbtn '+btnclass+'" disabled>Next</button>');
+        var nxtbtn = $('<button class="bg-blue-200 mx-auto lg:mx-2 nxtbtn '+btnclass+'" disabled>Next</button>');
         $('#start').append(entryrow);
         entryrow.append(hole);
         entryrow.append(minusbtn);
