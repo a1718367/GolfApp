@@ -17,7 +17,6 @@
       rel="stylesheet"
     />
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-
   <!--<link rel="stylesheet" href="style.css">-->
   <style>
     /* Set the size of the div element that contains the map */
@@ -26,11 +25,8 @@
      width: 100%;  /* The width is the width of the web page */
     }
  </style>
-
-  
-
 </head>
-<body class="bg-green-100">
+<body>
 
 
 
@@ -40,22 +36,20 @@
     <span class="text-2xl text-white tracking-widest pr-2 font-bold">Golf App</span>
     <i class="fa fa-golf-ball fa-2x text-white"></i>
   </div>
-  <!--<div class="block lg:hidden">
+  <div class="block lg:hidden">
     <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
       <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
     </button>
-  </div>-->
+  </div>
   <div class="lg:ml-10 w-full block flex-grow lg:flex lg:items-center lg:w-auto">
     <div class="text-base lg:flex-grow">
-      <a href="./index.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-        Home
-      </a>
-
-      <a href="./scorecard.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
         Score Card
       </a>
-
-      <a href="./compass.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+        Map
+      </a>
+      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
         Compass
       </a>
     </div>
@@ -76,51 +70,26 @@
     <h3 class="text-2xl px-2">Weather Condition</h3>
     <h4 class="px-2">Temp: <span id="temp"></span> °C</h4>
     <h4 class="px-2">Wind Speed: <span id="wspd"></span> m/s</h4>
-    <h4 class="px-2">Forecast: <span id="forcast"></span></h4>
   
   </div>
 
-
-</div>
+  
+  </div>
 
 <div class="flex mb-4">
 
-  <div class="container mt-2 w-1/2 border-solid border-4 border-green-500 lg:w-1/4">
-      <h3 class="text-2xl px-2">Compass & Wind</h3>
-      <div class="flex">
-        <div class="container">
-          <div class = "text-center compassdisplay">
-            <img id= 'arrow' class ="arrowimage" src="./assets/pngfuel.com.png">
-            <p id = "degree"> Compass not working</p>
-            <p id = "pleasenote"> Please note: Compass only works with handheld devices</p>
-        </div>
-          
-        </div>
-
+    <div class="container mt-2 w-1/2 border-solid border-4 border-green-500 lg:w-1/4">
+        <h3 class="text-2xl px-2">Compass & Wind</h3>
+      
       </div>
-      <div class="flex">
-
-        <div class="container">
-          <div class = "text-center compassdisplay">
-            <img id="windarrow" class ="arrowimage" src="https://img.pngio.com/wind-direction-arrows-png-7-png-image-wind-direction-png-512_512.png">
-            <p id = "windavailable"> Wind direction unavailable</p>
-        </div>
-
-
-        </div>
-
-
-      </div>
-    
-    </div>
-    
-    <div class="container h-64 mt-2 ml-2 w-1/2 border-solid border-4 border-green-500 lg:w-3/4">
-      <h3 class="text-2xl px-2">Map</h3>
+      
+      <div class="container h-64 mt-2 ml-2 w-1/2 border-solid border-4 border-green-500 lg:w-3/4">
+        <h3 class="text-2xl px-2">Map</h3>
 
 
 </div>
 
-
+  
 
 </div>
 
@@ -131,21 +100,10 @@
   <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-
-
-</div>
-
-    
-  <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    
-
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-
     <script src="script1.js"></script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBN-8zSdr3WI2rZ9CaoUa1kM8djr8M2Y8U&callback=initMap">
@@ -156,10 +114,3 @@
 </body>
 
 </html>
-
-    <script src="script.js"></script>
-
-</body>
-
-</html>
-
