@@ -22,7 +22,7 @@ function success(pos){
   console.log(latn, lonn)
   info(latn,lonn);
   forcast(latn, lonn);
-  initMap(latn, lonn);
+  //initMap(latn, lonn);
 
   }
   
@@ -112,12 +112,12 @@ var displaycompass = function(){
   var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
   if (iOS === true){
 
-    var createButton = document.createElement("BUTTON");  
-    createButton.innerHTML = "Press here for compass";    
-    createButton.setAttribute("class","bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full")   
-    createButton.setAttribute("id","but")
-    createButton.setAttribute("type","button")       
-    document.getElementsByClassName("compassdisplay")[0].appendChild(createButton); 
+    // var createButton = document.createElement("BUTTON");  
+    // createButton.innerHTML = "Press here for compass";    
+    // createButton.setAttribute("class","bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full")   
+    // createButton.setAttribute("id","but")
+    // createButton.setAttribute("type","button")       
+    // document.getElementsByClassName("compassdisplay")[0].appendChild(createButton); 
 
     /* https://stackoverflow.com/questions/16048514/can-i-use-javascript-to-get-the-compass-heading-for-ios-and-android
 stackoverflow was used to find the ollowing code to gain access to movement and orientation on ios devices*/
@@ -133,16 +133,11 @@ stackoverflow was used to find the ollowing code to gain access to movement and 
      }
     }).catch(console.error)
     });
-  }
-
-
-          
+  }    
 
           var rmtext = document.getElementById('pleasenote')
           rmtext.innerHTML="";
           
-
-
   
      if (window.DeviceOrientationEvent) {
      window.addEventListener('deviceorientation', function(eventData) {
@@ -158,8 +153,6 @@ stackoverflow was used to find the ollowing code to gain access to movement and 
   arrowimg.setAttribute('style','transform:rotate('+ direc +'deg)');
  
 
-  
-  
     var queryURL = 'https://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lon+'&units=metric&appid='+apikey;
     $.ajax({
           url: queryURL,
@@ -182,20 +175,13 @@ stackoverflow was used to find the ollowing code to gain access to movement and 
 
 })
 
- 
-
-
     });
-    
-
-    
+     
   }
-
-
-
 
 }
 displaycompass()
+
 
 
 //Matt's - Map marking
@@ -220,5 +206,8 @@ function initMap(lat, log) {
         position: latLng,
         map: map
     });
+    
     }
 };
+
+
