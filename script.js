@@ -12,12 +12,17 @@ navigator.geolocation.getCurrentPosition(success,error,options);
 
   
 function success(pos){
-    lat = pos.coords.latitude;
-    lon = pos.coords.longitude;
-    console.log("Latitude = " + lat + " " + "Longitude = " + lon);
-    $('#lat').text(lat);
-    $('#lon').text(lon);
-    info(lat,lon);
+  lat = pos.coords.latitude;
+  lon = pos.coords.longitude;
+  console.log("Latitude = " + lat + " " + "Longitude = " + lon);
+  $('#lat').text(lat);
+  $('#lon').text(lon);
+  latn = parseFloat(lat);
+  lonn = parseFloat(lon);
+  console.log(latn, lonn)
+  info(latn,lonn);
+  forcast(latn, lonn);
+  initMap()
 
   }
   
@@ -59,45 +64,45 @@ function info(lat, lon){
 })
 }
 
-
-//Matt's - Map marking
-
-console.log("test");
-
-var lat = -34.962764;
-
-var log = 138.526134;
-
-// function initMap() {
-//     var Latlog = new google.maps.LatLng(lat, log);
-//     var map = new google.maps.Map(
-//         document.getElementById('map'), {zoom: 30, center: Latlog, mapTypeId: 'satellite'});
-//     var marker = new google.maps.Marker({position: Latlog, map: map});
-// }
+function forcast(lat, lon){
+  var queryURL = 'https://api.openweathermap.org/data/2.5/forecast?lat='+lat+'&lon='+lon+'&units=metric&appid='+apikey;
+  
+  $.ajax({
+        url: queryURL,
+        method: "GET"
+        }).then(function(response) {
+          var foreinfo = response;
+          console.log(foreinfo)
+          displayforecast(foreinfo)
+})
+}
 
 
-function initMap() {
-    var Latlog = new google.maps.LatLng(lat, log);
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 30, center: Latlog,
-      mapTypeId: 'satellite'
-    });
+function displayforecast(obj){
+  $('#forecast').html("");
+  for(i=0;i<3;i++){
 
+    var frarr = i;
+    var fdate = obj.list[frarr].dt;
+    var dateString = moment.unix(fdate).format('ddd, hh:mm');
+    var ftemp = Math.round(obj.list[frarr].main.temp);
+    var ficon = obj.list[frarr].weather[0].icon;
+    var ficonurl = 'http://openweathermap.org/img/wn/'+ficon+'.png';
+    var fhumid = obj.list[frarr].main.humidity;
+    var fblock = $('<div class="inline-block m-2">');
+    var finfo = $('<div class="p-2">').text(dateString);
+    var fdicon = $('<img src='+ficonurl+' alt="weather icon">');
+    var fdtemp = $('<div class="">').text("Temp: "+ftemp+" °C");
+    var fdhum = $('<div class="">').text("Humidity: "+fhumid+" %");
+    $('#forecast').append(fblock);
+    fblock.append(finfo);
+    finfo.append(fdtemp);
+    fdtemp.append(fdhum);
+    fdhum.append(fdicon);
 
-    map.addListener('click', function(e) {
-        console.log("click");
-        placeMarkerAndPanTo(e.latLng, map);
-    });
-
-
-    function placeMarkerAndPanTo(latLng, map) {
-    var marker = new google.maps.Marker({
-        position: latLng,
-        map: map
-    });
-    }
-};
-
+  }
+  
+}
 
 
 //Andy's - Compass
@@ -193,4 +198,40 @@ stackoverflow was used to find the ollowing code to gain access to movement and 
 displaycompass()
 
 
+//Matt's - Map marking
 
+console.log("test");
+
+var lat = -34.962764;
+
+var log = 138.526134;
+
+// function initMap() {
+//     var Latlog = new google.maps.LatLng(lat, log);
+//     var map = new google.maps.Map(
+//         document.getElementById('map'), {zoom: 30, center: Latlog, mapTypeId: 'satellite'});
+//     var marker = new google.maps.Marker({position: Latlog, map: map});
+// }
+
+
+function initMap() {
+    var Latlog = new google.maps.LatLng(lat, log);
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 30, center: Latlog,
+      mapTypeId: 'satellite'
+    });
+
+
+    map.addListener('click', function(e) {
+        console.log("click");
+        placeMarkerAndPanTo(e.latLng, map);
+    });
+
+
+    function placeMarkerAndPanTo(latLng, map) {
+    var marker = new google.maps.Marker({
+        position: latLng,
+        map: map
+    });
+    }
+};
