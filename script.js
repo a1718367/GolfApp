@@ -133,11 +133,16 @@ stackoverflow was used to find the ollowing code to gain access to movement and 
      }
     }).catch(console.error)
     });
-  }    
+  }
+
+
+          
 
           var rmtext = document.getElementById('pleasenote')
           rmtext.innerHTML="";
           
+
+
   
      if (window.DeviceOrientationEvent) {
      window.addEventListener('deviceorientation', function(eventData) {
@@ -153,6 +158,8 @@ stackoverflow was used to find the ollowing code to gain access to movement and 
   arrowimg.setAttribute('style','transform:rotate('+ direc +'deg)');
  
 
+  
+  
     var queryURL = 'https://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lon+'&units=metric&appid='+apikey;
     $.ajax({
           url: queryURL,
@@ -175,18 +182,20 @@ stackoverflow was used to find the ollowing code to gain access to movement and 
 
 })
 
+ 
+
+
     });
-     
+    
+
+    
   }
+
+
+
 
 }
 displaycompass()
-
-
-
-
-
-
 
 
 //Matt's - Map marking
@@ -211,8 +220,5 @@ function initMap(lat, log) {
         position: latLng,
         map: map
     });
-    
     }
 };
-
-
