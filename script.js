@@ -22,7 +22,7 @@ function success(pos){
   console.log(latn, lonn)
   info(latn,lonn);
   forcast(latn, lonn);
-  initMap(latn, lonn);
+  //initMap(latn, lonn);
 
   }
   
