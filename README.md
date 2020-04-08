@@ -19,6 +19,7 @@ Then I click on a tab, the map of the course will be displayed.
 <ls>
 Current wind speed and direction will also become available
 </ls>
+</ul>
 <div>
 Then I proceed to start my game
 </div>
@@ -38,6 +39,8 @@ Process continue until game completed at hole number 18.
 <ls>
 Then my score is tally up and my performance at each hole and the game is displayed.
 </ls>
+</ul>
 <a href='https://udara.github.io/after_one_of_Jupiter-s_moons/'>Golf App</a>
+
 <img src='assets/screenshot.png' alt='screenshothome'>
 <img src='assets/screenshotsc.png' alt='screenshotscorecard'>
