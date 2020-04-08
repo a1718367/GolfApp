@@ -136,9 +136,13 @@ stackoverflow was used to find the ollowing code to gain access to movement and 
   }
 
 
+          
+
           var rmtext = document.getElementById('pleasenote')
           rmtext.innerHTML="";
           
+
+
   
      if (window.DeviceOrientationEvent) {
      window.addEventListener('deviceorientation', function(eventData) {
@@ -152,6 +156,8 @@ stackoverflow was used to find the ollowing code to gain access to movement and 
   var direc = 360 - compassdir 
   var arrowimg = document.getElementById('arrow');
   arrowimg.setAttribute('style','transform:rotate('+ direc +'deg)');
+ 
+
   
   
     var queryURL = 'https://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lon+'&units=metric&appid='+apikey;
@@ -173,12 +179,20 @@ stackoverflow was used to find the ollowing code to gain access to movement and 
 
           },
           
+
 })
+
+ 
 
 
     });
-        
+    
+
+    
   }
+
+
+
 
 }
 displaycompass()
