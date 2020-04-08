@@ -14,7 +14,7 @@ When I arrive at the golf course, I open my app
 Weather & forecast details at the location will showed up.
 </li>
 <li>
-Then I click on a tab, the map of the course will be displayed.
+The map of the course will be displayed.
 </li>
 <li>
 Current wind speed and direction will also become available
@@ -25,7 +25,7 @@ Then I proceed to start my game
 </div>
 <ul>
 <li>
-At the 1st hole, I clikc on a tab and a scorecard is displayed
+At the 1st hole, I click on a tab and a score card is displayed
 </li>
 <li>
 If I incurred a penalty, I click on a button on my app and record the type of penalty. Score is stored on local storage
@@ -40,7 +40,7 @@ Process continue until game completed at hole number 18.
 Then my score is tally up and my performance at each hole and the game is displayed.
 </li>
 </ul>
-<a href='https://udara.github.io/after_one_of_Jupiter-s_moons/'>Golf App</a>
+<a href='https://a1718367.github.io/GolfApp/'>Golf App</a>
 
 <img src='assets/screenshot.png' alt='screenshothome'>
 <img src='assets/screenshotsc.png' alt='screenshotscorecard'>
