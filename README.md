@@ -10,35 +10,35 @@ I can use google map and weather app to look up this data, but now I have a new 
 
 When I arrive at the golf course, I open my app
 <ul>
-<ls>
+<li>
 Weather & forecast details at the location will showed up.
-</ls>
-<ls>
+</li>
+<li>
 Then I click on a tab, the map of the course will be displayed.
-</ls>
-<ls>
+</li>
+<li>
 Current wind speed and direction will also become available
-</ls>
+</li>
 </ul>
 <div>
 Then I proceed to start my game
 </div>
 <ul>
-<ls>
+<li>
 At the 1st hole, I clikc on a tab and a scorecard is displayed
-</ls>
-<ls>
+</li>
+<li>
 If I incurred a penalty, I click on a button on my app and record the type of penalty. Score is stored on local storage
-</ls>
-<ls>
+</li>
+<li>
 At the conclusion at a hole, I then click a button indicating moving on to the next hole.
-</ls>
-<ls>
+</li>
+<li>
 Process continue until game completed at hole number 18.
-</ls>
-<ls>
+</li>
+<li>
 Then my score is tally up and my performance at each hole and the game is displayed.
-</ls>
+</li>
 </ul>
 <a href='https://udara.github.io/after_one_of_Jupiter-s_moons/'>Golf App</a>
 
